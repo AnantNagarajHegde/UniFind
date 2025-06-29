@@ -113,7 +113,7 @@ node server.js
 
 
 #### 6. Serve Frontend:
-• Place the Front-End/ files in a directory served by the backend (e.g., move to Back-End/public/ if configured) or use a static server:
+• Place the Frontend/ files in a directory served by the backend (e.g., move to Backend/public/ if configured) or use a static server:
 ```
 cd UniFind_Frontend
 npx http-server
