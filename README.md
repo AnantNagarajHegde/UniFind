@@ -51,7 +51,7 @@ UniFind is a web-based platform designed to assist university students, faculty,
 ### Project Structure:
 ```  
 UniFind/
-├── Back-End/
+├── Backend/
 │   ├── .vscode/                    # VSCode settings
 │   ├── node_modules/               # Node.js dependencies
 │   ├── uploads/                    # Directory for uploaded item photos
@@ -59,22 +59,16 @@ UniFind/
 │   ├── package-lock.json           # Dependency lock file
 │   ├── package.json                # Project dependencies and scripts
 │   └── server.js                   # Main server file
-├── Front-End/
+├── Frontend/
 │   ├── .vscode/                    # VSCode settings
-│   ├── Anant LinkedIn profile pic_square.JPG  # Image asset
-│   ├── Profile pic_square.JPG      # Image asset
 │   ├── about.html                  # About Us page
 │   ├── admin.html                  # Admin dashboard
 │   ├── home.html                   # Home page
-│   ├── logo.png                    # Project logo
 │   ├── report.html                 # Report lost/found items
 │   ├── script.js                   # JavaScript for interactivity
 │   ├── search.html                 # Search items page
 │   ├── styles.css                  # CSS styles
 │   ├── working.html                # How It Works page
-│   ├── UniFind_Phase_02_Report.pdf # Project report
-│   ├── University Lost and Found System_Phase_01_ER.mwb  # ER diagram
-│   └── University Lost and Found System_  # Additional documentation
 └── README.md                       # Project documentation
 ```
 <hr>
