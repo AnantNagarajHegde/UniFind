@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniFind - Search Item</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png">
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="home.html" class="logo">
+          <img src="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png" alt="UniFind Logo"
+            style="height: 50px; vertical-align: middle; margin-right: 8px;">
+          UniFind
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="home.html"><i class="fas fa-house"></i>&nbsp;Home</a>
+          <a href="report.html"><i class="fas fa-flag"></i>&nbsp;Report Item</a>
+          <a href="search.html"><i class="fas fa-search"></i>&nbsp;Search</a>
+          <a href="working.html"><i class="fas fa-gears"></i>&nbsp;How It Works</a>
+          <a href="about.html"><i class="fas fa-user"></i>&nbsp;About Us</a>
+        </div>
+        <div class="auth-buttons">
+          <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content: Search Page -->
+  <section class="search_section" id="search">
+    <div class="search_container">
+      <h2 class="section-title">Search Lost & Found Items</h2>
+      <div class="search-container">
+        <form class="search-form">
+          <div class="search-row">
+            <div class="form-group">
+              <label for="item-type">Item Type</label>
+              <select id="item-type">
+                <option value="">All Types</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Documents">Documents</option>
+                <option value="Keys">Keys</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+              <select id="location">
+                <option value="">All Locations</option>
+                <option value="Library">Library</option>
+                <option value="Cafeteria">Cafeteria</option>
+                <option value="Science Building">Science Building</option>
+                <option value="Engineering Building">Engineering Building</option>
+                <option value="Arts Building">Arts Building</option>
+                <option value="Sports Complex">Sports Complex</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-row">
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" id="date" />
+            </div>
+            <div class="form-group">
+              <label for="status">Status</label>
+              <select id="status">
+                <option value="">All Status</option>
+                <option value="Open">Lost (Open)</option>
+                <option value="Unclaimed">Found (Unclaimed)</option>
+                <option value="Claimed">Claimed</option>
+                <option value="Closed">Closed</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-row">
+            <div class="form-group">
+              <label for="keyword">Keyword</label>
+              <input type="text" id="keyword" placeholder="Search by description, color, etc." />
+            </div>
+          </div>
+          <button type="submit" class="search-btn">Search</button>
+        </form>
+      </div>
+
+      <!-- Display lost items -->
+    <!-- Replace the existing lost/found items lists with this -->
+<div class="search-results">
+  <h3>Search Results</h3>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="all">All Items</button>
+    <button class="tab-btn" data-tab="lost">Lost Items</button>
+    <button class="tab-btn" data-tab="found">Found Items</button>
+  </div>
+  
+  <div class="items-container">
+    <!-- Cards will be inserted here by JavaScript -->
+  </div>
+</div>
+  </section>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('contactModal')">×</span>
+      <h2>Contact Owner</h2><hr>
+      <form id="contactForm">
+        <div class="form-row">
+          <label for="contact-message">Message:</label>
+          <textarea id="contact-message" placeholder="Enter your message to the owner..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Claim Modal -->
+  <div id="claimItemModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('claimItemModal')">×</span>
+      <h2>Claim Item</h2><hr>
+      <form id="claimItemForm">
+        <input type="hidden" id="claim-item-id" name="item_id">
+        <input type="hidden" id="claim-user-id" name="user_id">
+        <div class="form-row">
+          <label for="claim-reason">Reason:</label>
+          <textarea id="claim-reason" placeholder="Why do you believe this is your item?" required></textarea>
+        </div>
+        <div class="form-row">
+          <label for="claim-proof">Proof:</label>
+          <textarea id="claim-proof" placeholder="Provide any proof (e.g., description, serial number)..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Submit Claim</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">UniFind</h3>
+          <p>
+            A university-wide lost and found network designed to help campus community members reconnect with their lost
+            belongings.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search Items</a></li>
+            <li><a href="report.html">Report Item</a></li>
+            <li><a href="working.html">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> RV University, Bangalore</li>
+            <li><i class="fas fa-envelope"></i> support@unifind.edu</li>
+            <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 UniFind - University Lost &amp; Found Network. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <button id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

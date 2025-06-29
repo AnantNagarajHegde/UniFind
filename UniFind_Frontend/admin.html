@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniFind - Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png">
+
+  <style>
+    .container {
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    button {
+      padding: 6px 12px;
+      margin-right: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button:first-child {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    button:last-child {
+      background-color: #f44336;
+      color: white;
+    }
+
+    input[type="text"] {
+      padding: 6px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+    }
+
+    /* Dark mode support */
+    .dark-mode th {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .dark-mode tr:nth-child(even) {
+      background-color: #444;
+    }
+
+    .dark-mode td {
+      border-color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="admin.html" class="logo"><img
+          src="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png" alt="UniFind Logo"
+          style="height: 50px; vertical-align: middle; margin-right: 8px;">
+        UniFind Admin</a>
+      <button onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Admin Dashboard - Found Item Claims</h1>
+    <div class="admin-controls">
+      <button id="refreshBtn" onclick="fetchClaims()">Refresh Claims</button>
+    </div>
+
+    <table id="claimsTable">
+      <thead>
+        <tr>
+          <th>Claim ID</th>
+          <th>Claimant</th>
+          <th>Item ID</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Verification</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="7" class="empty-state">Loading claims...</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user || user.User_Type.toLowerCase() !== "admin") {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <script src="admin.js"></script>
+</body>
+
+</html>

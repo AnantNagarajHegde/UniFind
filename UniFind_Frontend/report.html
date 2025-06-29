@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniFind - Report Item</title>
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+ -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png">
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="home.html" class="logo">
+          <img src="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png" alt="UniFind Logo"
+            style="height: 50px; vertical-align: middle; margin-right: 8px;">
+          UniFind
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="home.html"><i class="fas fa-house"></i>&nbsp;Home</a>
+          <a href="report.html"><i class="fas fa-flag"></i>&nbsp;Report Item</a>
+          <a href="search.html"><i class="fas fa-search"></i>&nbsp;Search</a>
+          <a href="working.html"><i class="fas fa-gears"></i>&nbsp;How It Works</a>
+          <a href="about.html"><i class="fas fa-user"></i>&nbsp;About Us</a>
+        </div>
+        <div class="auth-buttons">
+          <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content: Report Item Page -->
+  <section class="report_section">
+    <div class="container">
+      <h2 class="section-title">Report an Item</h2>
+
+      <!-- Lost Item Report Form -->
+      <div class="search-container">
+        <h2>Report Lost Item</h2>
+        <form id="lostReportForm" class="search-form">
+
+          <!-- Full‑width Row: Item Name/Description -->
+          <div class="search-row">
+            <div class="form-group" style="flex: 1 1 100%;">
+              <label for="lost-name">Item Name/Description</label>
+              <input type="text" id="lost-name" required placeholder="E.g., Black Dell Laptop with Stickers" />
+            </div>
+          </div>
+
+          <!-- Row 2: Category + Location -->
+          <div class="search-row">
+            <div class="form-group">
+              <label for="lost-category">Category</label>
+              <select id="lost-category" required>
+                <option value="">Select category</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="accessories">Accessories</option>
+                <option value="documents">Documents</option>
+                <option value="keys">Keys</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="lost-location">Last Seen Location</label>
+              <select id="lost-location" required>
+                <option value="">Select location</option>
+                <option value="library">Library</option>
+                <option value="cafeteria">Cafeteria</option>
+                <option value="science-building">Science Building</option>
+                <option value="engineering-building">Engineering Building</option>
+                <option value="arts-building">Arts Building</option>
+                <option value="sports-complex">Sports Complex</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Row 3: Date Lost + Time -->
+          <div class="search-row">
+            <div class="form-group">
+              <label for="lost-date">Date Lost</label>
+              <input type="date" id="lost-date" required />
+            </div>
+            <div class="form-group">
+              <label for="lost-time">Approximate Time</label>
+              <input type="time" id="lost-time" />
+            </div>
+          </div>
+
+          <!-- Row 4: Color + Contact Preference -->
+          <div class="search-row">
+            <div class="form-group">
+              <label for="lost-color">Color</label>
+              <input type="text" id="lost-color" placeholder="E.g., Black, Silver, Red" />
+            </div>
+            <div class="form-group">
+              <label for="lost-contact-preference">Contact Preference</label>
+              <select id="lost-contact-preference">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Full‑width Row: Distinguishing Features -->
+          <div class="search-row">
+            <div class="form-group" style="flex: 1 1 100%;">
+              <label for="lost-features">Distinguishing Features</label>
+            
+              <textarea id="lost-features" placeholder="Any unique marks, stickers, engravings, etc."></textarea>
+            </div>
+          </div>
+
+          <!-- Full‑width Row: Upload Photo -->
+          <div class="search-row">
+            <div class="form-group" style="flex: 1 1 100%;">
+              <label for="lost-photo">Upload Photo (if available)</label>
+              <input type="file" id="lost-photo" accept="image/*" />
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="search-btn">
+            Submit Lost Item Report
+          </button>
+
+        </form>
+      </div>
+
+      <br><br><br><br><br><br>
+
+
+      <!-- Found Item Report Form -->
+      <div class="search-container">
+        <h2>Report Found Item</h2>
+        <form id="foundReportForm" class="search-form">
+
+
+           <!-- Full‑width Row: Item Name/Description -->
+           <div class="search-row">
+            <div class="form-group" style="flex: 1 1 100%;">
+              <label for="found-name">Item Name/Description</label>
+              <input type="text" id="found-name" required placeholder="E.g., Blue Water Bottle" />
+            </div>
+          </div>
+
+          <!-- Row 2: Category + Found Location -->
+          <div class="search-row">
+            <div class="form-group">
+              <label for="found-category">Category</label>
+              <select id="found-category" required>
+                <option value="">Select category</option>
+                <option value="electronics">Electronics</option>
+                <option value="accessories">Accessories</option>
+                <option value="documents">Documents</option>
+                <option value="keys">Keys</option>
+                <option value="clothing">Clothing</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="found-location">Found Location</label>
+              <select id="found-location" required>
+                <option value="">Select location</option>
+                <option value="library">Library</option>
+                <option value="cafeteria">Cafeteria</option>
+                <option value="science-building">Science Building</option>
+                <option value="engineering-building">Engineering Building</option>
+                <option value="arts-building">Arts Building</option>
+                <option value="sports-complex">Sports Complex</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Row 3: Date Found + Time -->
+          <div class="search-row">
+            <div class="form-group">
+              <label for="found-date">Date Found</label>
+              <input type="date" id="found-date" required />
+            </div>
+            <div class="form-group">
+              <label for="found-time">Approximate Time</label>
+              <input type="time" id="found-time" />
+            </div>
+          </div>
+
+          <!-- Row 4: Color + Current Item Location -->
+          <div class="search-row">
+            <div class="form-group">
+              <label for="found-color">Color</label>
+              <input type="text" id="found-color" placeholder="E.g., Black, Silver, Red" />
+            </div>
+            <div class="form-group">
+              <label for="found-current-location">Current Item Location</label>
+              <select id="found-current-location" required>
+                <option value="with-me">With Me</option>
+                <option value="campus-security">Admin Office</option>
+                <option value="campus-security">Security Office</option>
+                <option value="department-office">Department Office</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Full‑width Row: Distinguishing Features -->
+          <div class="search-row">
+            <div class="form-group" style="flex: 1 1 100%;">
+              <label for="found-features">Distinguishing Features</label>
+              <textarea id="found-features" placeholder="Any unique marks, stickers, engravings, etc."></textarea>
+            </div>
+          </div>
+
+          <!-- Full‑width Row: Upload Photo -->
+          <div class="search-row">
+            <div class="form-group" style="flex: 1 1 100%;">
+              <label for="found-photo">Upload Photo</label>
+              <input type="file" id="found-photo" accept="image/*" />
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="search-btn">
+            Submit Found Item Report
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">UniFind</h3>
+          <p>
+            A university-wide lost and found network designed to help campus community members reconnect with their lost
+            belongings.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search Items</a></li>
+            <li><a href="report.html">Report Item</a></li>
+            <li><a href="working.html">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> RV University, Bangalore</li>
+            <li><i class="fas fa-envelope"></i> support@unifind.edu</li>
+            <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 UniFind - University Lost & Found Network. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <button id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+  
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+</body>
+
+</html>

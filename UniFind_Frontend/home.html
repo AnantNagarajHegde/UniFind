@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniFind - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png">
+
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="home.html" class="logo">
+          <img src="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png" alt="UniFind Logo"
+            style="height: 50px; vertical-align: middle; margin-right: 8px;">
+          UniFind&nbsp;&nbsp;
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="home.html"><i class="fas fa-house"></i>&nbsp;Home&nbsp;</a>
+          <a href="report.html"><i class="fas fa-flag"></i>&nbsp;Report Item&nbsp;</a>
+          <a href="search.html"><i class="fas fa-search"></i>&nbsp;Search&nbsp;</a>
+          <a href="working.html"><i class="fas fa-gears"></i>&nbsp;How It Works&nbsp;</a>
+          <a href="about.html"><i class="fas fa-user"></i>&nbsp;About Us&nbsp;</a>
+        </div>
+<!-- Auth buttons section - displayed when NOT logged in -->
+        <div class="auth-buttons">
+          <button class="login-btn" onclick="openModal('loginModal')">Login</button>
+          <button class="signup-btn" onclick="openModal('signupModal')">Sign Up</button>&nbsp;
+          <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </div>
+          
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section (Main Content for Home Page) -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>University Lost & Found Network</h1>
+      <p>
+        A decentralized platform connecting university members to help locate lost
+        items on campus. Join our community and help make the campus a better place.
+      </p>
+      <div class="hero-buttons">
+        <a href="report.html" class="btn btn-primary">Report Lost Item</a>
+        <a href="report.html" class="btn btn-secondary">Report Found Item</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview Section -->
+  <section id="project-overview">
+    <h2>Project Overview</h2>
+    <p>Welcome to the Lost & Found Network! This platform helps students, faculty, and staff easily report and locate
+      lost items on campus using a decentralized database system. The system is designed to simplify the process of
+      finding lost items and ensure that they are returned to their rightful owner quickly.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Features</h2>
+    <ul>
+      <li><strong>Decentralized Database:</strong> A robust system to store and manage lost items data.</li>
+      <li><strong>Item Search:</strong> Easily search for lost items by name, category, or location.</li>
+      <li><strong>Real-Time Updates:</strong> Track the status of lost and found items instantly.</li>
+      <li><strong>User-Friendly Interface:</strong> Simple navigation to report lost items and claim found ones.</li>
+    </ul>
+  </section>
+
+  <!-- Technologies Section -->
+  <section id="technologies">
+    <h2>Technologies Used</h2>
+    <ul>
+      <li><strong>Database:</strong> MySQL</li>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Backend:</strong> Node.js, Express.js</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">UniFind</h3>
+          <p>
+            A university-wide lost and found network designed to help campus community members reconnect with their lost
+            belongings.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search Items</a></li>
+            <li><a href="report.html">Report Item</a></li>
+            <li><a href="working.html">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> RV University, Bangalore</li>
+            <li><i class="fas fa-envelope"></i> support@unifind.edu</li>
+            <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 UniFind - University Lost & Found Network. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals (Login, Signup, etc.) -->
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('loginModal')">&times;</span>
+      <h2 class="modal-title">Login to UniFind</h2>
+      <form id="loginForm">
+        <div class="form-row">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required />
+        </div>
+        <div class="form-row">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required />
+        </div>
+        <button type="submit" class="form-submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('signupModal')">&times;</span>
+      <h2 class="modal-title">Create an Account</h2>
+      <form id="signupForm">
+        <div class="form-row">
+          <label for="signupFirstName">First Name</label>
+          <input type="text" id="signupFirstName" required />
+        </div>
+        <div class="form-row">
+          <label for="signupLastName">Last Name</label>
+          <input type="text" id="signupLastName" required />
+        </div>
+        <div class="form-row">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" required />
+        </div>
+        <div class="form-row">
+          <label for="signupPhone">Phone Number</label>
+          <input type="tel" id="signupPhone" required />
+        </div>
+        <div class="form-row">
+          <label for="signupUserType">User Type</label>
+          <select id="signupUserType" required>
+            <option value="">Select user type</option>
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Staff">Staff</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="signupDepartment">Department</label>
+          <input type="text" id="signupDepartment" required />
+        </div>
+        <div class="form-row">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" required />
+        </div>
+        <!-- Remove the ID field and Confirm Password for simplicity -->
+        <button type="submit" class="form-submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+
+  <button id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>

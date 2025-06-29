@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniFind - How It Works</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png">
+
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="home.html" class="logo">
+          <img src="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png" alt="UniFind Logo"
+            style="height: 50px; vertical-align: middle; margin-right: 8px;">
+          UniFind
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="home.html"><i class="fas fa-house icon-space"></i>&nbsp;Home</a>
+          <a href="report.html"><i class="fas fa-flag"></i>&nbsp;Report Item</a>
+          <a href="search.html"><i class="fas fa-search"></i>&nbsp;Search</a>
+          <a href="working.html"><i class="fas fa-gears"></i>&nbsp;How It Works</a>
+          <a href="about.html"><i class="fas fa-user"></i>&nbsp;About Us</a>
+        </div>
+        <div class="auth-buttons">
+          <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+      </nav>
+    </div>
+  </header>
+  <br><br>
+
+  <!-- Main Content: How It Works Page -->
+  <section class="about_section" id="about">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="how-it-works">
+        <div class="steps">
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-upload"></i>
+            </div>
+            <h3 class="step-title">Report an Item</h3>
+            <p class="step-desc">
+              Submit details with photos to help identify lost or found items.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="step-title">Search Database</h3>
+            <p class="step-desc">
+              Use filters like category, location, date, and keywords to search for items.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="step-title">Claim & Verify</h3>
+            <p class="step-desc">
+              Submit a claim with verification details to recover your lost item.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+      <!-- Statistics Section -->
+<!--       <section class="section">
+        <div class="container">
+            <h2 class="section-title">Network Statistics</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">354</div>
+                    <div class="stat-label">Items Found</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">289</div>
+                    <div class="stat-label">Items Returned</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">82%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1,205</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+      <!-- Feedback Section -->
+  <section class="section" id="feedback">
+    <div class="container">
+      <h2 class="section-title">We Value Your Feedback..!</h2>
+      <div class="feedback-container">
+        <form id="feedbackForm">
+          <div class="form-row">
+            <label for="feedback-type">Feedback Type</label>
+            <select id="feedback-type">
+              <option value="">Select type (optional)</option>
+              <option value="Bug">Report Issue</option>
+              <option value="Feature">Feature Request</option>
+              <option value="Comment">General Comment</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="feedback-message">Message</label>
+            <textarea id="feedback-message" rows="5" required></textarea>
+          </div>
+          <div class="form-row">
+            <label>Rating</label>
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+          </div>
+          <button type="submit" class="form-submit">Submit Feedback</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">UniFind</h3>
+          <p>
+            A university-wide lost and found network designed to help campus community members reconnect with their lost
+            belongings.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search Items</a></li>
+            <li><a href="report.html">Report Item</a></li>
+            <li><a href="working.html">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> RV University, Bangalore</li>
+            <li><i class="fas fa-envelope"></i> support@unifind.edu</li>
+            <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 UniFind - University Lost & Found Network. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <button id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+ <!-- JavaScript -->
+ <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+ <script src="script.js"></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'936444553c3bbd19',t:'MTc0NTY1MTQ5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+
+</html>

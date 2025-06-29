@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniFind - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png">
+
+    <style>
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --secondary: #2ecc71;
+            --dark: #34495e;
+            --light: #ecf0f1;
+            --danger: #e74c3c;
+            --warning: #f39c12;
+            
+            /* Dark mode colors */
+            --dark-primary: #2980b9;
+            --dark-primary-dark: #1f6aa1;
+            --dark-secondary: #27ae60;
+            --dark-background: #121212;
+            --dark-surface: #1e1e1e;
+            --dark-text: #f5f5f5;
+            --dark-card: #2d2d2d;
+            --dark-input: #333;
+            --dark-border: #444;
+        }
+
+        .section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        /* Mission Section */
+        .mission-section {
+            background: linear-gradient(135deg, #d2f8f0, #e6f0ff);
+            padding: 4rem 0;
+            margin-top: rem;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .mission-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .mission-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .mission-content-head {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+
+
+        .mission-content h2 {
+
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: rgb(2, 2, 2);
+        }
+
+        .mission-content p {
+            padding-left: 50px;
+            padding-right: 50px;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+            margin-top: 1.2rem;
+            color: #050505;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Team Section */
+
+        .section {
+            border: 2px solid rgb(0, 0, 0);
+            background: linear-gradient(135deg, #d2f8f0, #e6f0ff);
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        .team-grid {
+            display: grid;
+            padding: 50px;
+
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 2rem;
+
+        }
+
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-photo {
+            height: 295px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 1.5rem;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .member-role {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .member-bio {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links .member-social{
+            display: flex;
+            gap: 15px;
+        }
+
+        /* —— MEMBER SOCIAL ICONS —— */
+.member-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 1rem;
+  }
+  
+  .member-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light);
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 1.1rem;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+  }
+  
+  .member-social a:hover {
+    background-color: var(--primary);
+    color: #fff;
+  }
+  
+  /* —— DARK MODE OVERRIDES —— */
+  body.dark-mode .member-social a {
+    background-color: var(--dark-surface);
+  }
+  
+  body.dark-mode .member-social a:hover {
+    background-color: var(--dark-primary-dark);
+    color: #fff;
+  }
+  
+
+        /* Footer */
+        .full-width-footer {
+            width: 100vw !important;
+            margin-left: calc(-50vw + 50%) !important;
+            margin-right: calc(-50vw + 50%) !important;
+            background-color: #2c3e50 !important;
+            color: white !important;
+            padding: 2rem 0 !important;
+            box-sizing: border-box !important;
+            position: relative !important;
+            left: 0 !important;
+            right: 0 !important;
+            margin-top: 3rem !important;
+        }
+
+        .footer-inner {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 0 20px !important;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .social-icon .member-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-icon:hover .member-social a:hover {
+            background-color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        /* Theme toggle button */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background: linear-gradient(to bottom, #0a0a0a, #333333);
+            color: var(--dark-text);
+        }
+
+        body.dark-mode header {
+            background: linear-gradient(to bottom, #0a0a0a, #333333);
+        }
+
+        body.dark-mode .about-hero {
+            background: linear-gradient(rgba(41, 128, 185, 0.7), rgba(41, 128, 185, 0.9)), url('https://via.placeholder.com/1200x400');
+        }
+
+        body.dark-mode .team-member {
+            background: linear-gradient(to bottom, #0a0a0a, #333333);
+            color: var(--dark-text);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgb(152, 151, 151);
+        }
+
+        body.dark-mode .member-name {
+            color: var(--dark-text);
+        }
+
+        body.dark-mode .member-bio {
+            color: #bbb;
+        }
+
+        body.dark-mode .team-intro {
+            color: white;
+        }
+
+        body.dark-mode section {
+            background: linear-gradient(to bottom, #0a0a0a, #333333);
+            border: 2px solid white;
+        }
+
+        body.dark-mode  {
+            background: linear-gradient(to bottom, #0a0a0a, #333333);
+            color: var(--dark-text);
+        }
+
+        body.dark-mode  {
+            background: linear-gradient(to bottom, #0a0a0a, #333333);
+        }
+
+        body.dark-mode .mission-section {
+            background: linear-gradient(to bottom, #0a0a0a, #333333);
+            border: 2px solid white;
+        }
+
+        body.dark-mode .mission-content h2 {
+            color: #3498db;
+        }
+
+        body.dark-mode .mission-content p {
+            color: white;
+        }
+
+        body.dark-mode .section-title {
+            color: #3498db;
+        }
+
+        body.dark-mode footer {
+            background: linear-gradient(to bottom, #0a0a0a, #333333);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+                font-size: 1.5rem;
+                color: white;
+                cursor: pointer;
+            }
+
+            .show-menu {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                padding: 1rem;
+                z-index: 100;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .mission-container {
+                flex-direction: column-reverse;
+            }
+        }
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 40px;
+            right: 30px;
+            z-index: 1000;
+            display: none;
+            /* hidden by default */
+            background-color: #38b6ff;
+            color: white;
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="home.html" class="logo">
+                    <img src="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\UniFind_logo_withouttext.png" alt="UniFind Logo"
+                        style="height: 50px; vertical-align: middle; margin-right: 8px;">
+                    UniFind
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="home.html"><i class="fas fa-house icon-space"></i>&nbsp;Home</a>
+                    <a href="report.html"><i class="fas fa-flag"></i>&nbsp;Report Item</a>
+                    <a href="search.html"><i class="fas fa-search"></i>&nbsp;Search</a>
+                    <a href="working.html"><i class="fas fa-gears"></i>&nbsp;How It Works</a>
+                    <a href="about.html"><i class="fas fa-user"></i>&nbsp;About Us</a>
+                </div>
+                <div class="auth-buttons">
+                    <div class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </div> 
+                    <!-- <button class="login-btn">Login</button>
+                    <button class="signup-btn">Sign Up</button>  -->
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br>
+
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-container">
+                <div class="mission-content">
+                    <h2 class="mission-content-head">Our Mission</h2>
+                    <p>At UniFind, our mission is to create a more connected and responsible campus community by
+                        facilitating the recovery of lost items and promoting honesty and accountability.</p>
+                    <p>We believe technology can help solve everyday problems and build stronger communities. By making
+                        it easy to report and search for lost items, we hope to reduce waste, save time, and bring peace
+                        of mind to students and staff.</p>
+                    <p>Started as a student project in 2024, UniFind has grown to serve multiple university campuses,
+                        helping thousands of items find their way back to their owners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-intro">
+                <p>Meet the team behind UniFind - a passionate group of developers and designers dedicated to building a
+                    better campus community through innovative technology solutions.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <img src="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\Amruthesh_UniFind.jpg" alt="Amruthesh" class="member-photo">
+                    <div class="member-info">
+                        <h3 class="member-name">Amruthesh Hiremath</h3>
+                        <div class="member-role">Full-Stack Developer</div>
+                        <p class="member-bio">AAmruthesh collaborated closely in the full-stack development of UniFind, contributing equally to both the technical foundation and the user experience of the platform, bringing the vision to life.</p>
+                        <div class="member-social">
+                            <a href="https://www.linkedin.com/in/amruthesh-c-hiremath-973b78336/" target="_blank"
+                                rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Amruth-hiremath" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <img src="E:\Clg_code\Sem2\DBMS\SemEndProject\Others\Anant_UniFind.JPG" alt="Anant"
+                        class="member-photo">
+                    <div class="member-info">
+                        <h3 class="member-name">Anant Hegde</h3>
+                        <div class="member-role">Full-Stack Developer</div>
+                        <p class="member-bio">Anant worked alongside in the full-stack development of UniFind, sharing responsibility for both backend and frontend, ensuring a seamless, accessible, and robust platform for all campus users.</p>
+                        <div class="member-social">
+                            <a href="https://www.linkedin.com/in/ananthegde2024/" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/AnantHegde" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://x.com/Anant_Hegde_" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    </div><!-- Closing any open container -->
+
+    <!-- Footer - moved outside any container -->
+    <footer
+        style="width: 100%; background-color: #2c3e50; color: white; padding: 40px 0; margin: 0; box-sizing: border-box;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">UniFind</h3>
+                    <p>A university-wide lost and found network designed to help campus community members reconnect with
+                        their lost belongings.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="search.html">Search Items</a></li>
+                        <li><a href="report.html">Report Item</a></li>
+                        <li><a href="working.html">How It Works</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> RV University, Bangalore</li>
+                        <li><i class="fas fa-envelope"></i> support@unifind.edu</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"
+                style="text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #bdc3c7; font-size: 0.9rem;">
+                &copy; 2025 UniFind - University Lost & Found Network. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js">
+        // Toggle mobile menu
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show-menu');
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            // Redirect to main page for login/signup
+            window.location.href = "home.html";
+        }
+
+        // Dark mode functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference or prefer-color-scheme
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Apply dark mode if saved or preferred
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // Theme toggle event handler
+        themeToggle.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+
+            // Update icon
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Show the button when scrolling down
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('scrollToTopBtn');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+
+        // Scroll to top on click
+        document.getElementById('scrollToTopBtn')?.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
