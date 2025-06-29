@@ -95,7 +95,7 @@ mysql -u yourusername -p unifind < UniFind_Backend/Lost_and_Found.sql
 ```
 
 #### 4. Configure Environment:
-• In Back-End/, create a .env file with:
+• In Backend/, create a .env file with:
 ```
 DB_HOST=localhost
 DB_USER=yourusername
